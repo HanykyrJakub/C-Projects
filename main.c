@@ -8,7 +8,7 @@
  * File:   main.c
  * Author: Počítač
  *
- * Created on 8. února 2021, 19:59
+ * Created on 6. října 2021, 17:30
  */
 
 #include <stdio.h>
@@ -17,47 +17,15 @@
 /*
  * 
  */
-
 #include <stdio.h>
-#include <stdlib.h>
-
-/*
- * 
- */
-double nalez (){
- double cislo ;
-
-    printf ("zadej cislo: ");
-    scanf ("%lf", &cislo);
-    return cislo;
-}
-
-void porovnat (double num_a, double num_b){
-    printf("Větší číslo z těch dvou je %lf.\n", (num_a > num_b) ? num_a : num_b);
+int an(int a1, int n, int d) {
+   return (a1 + (n - 1) * d);
 }
 int main() {
-    char opacko = "a";
-    double promen_a, promen_b;
-    
-    while (opacko != "n") {
-        printf ("porovnání dvou čísel\n----------------------\n");
-        promen_a = nalez ();
-        promen_b = nalez ();
-        porovnat (promen_a, promen_b);
-        porovnat (14.6, 24.8);
-        
-        printf ("\nChceš znovu porovnat? [a/n] ");
-        
-        do {
-            opacko = (char) getchar();
-        } while (opacko == "\n");
-    }
-    return (EXIT_SUCCESS);
-}
-
-
-int main(int argc, char** argv) {
-
-    return (EXIT_SUCCESS);
+   int a1 = 4;
+   int d = 1;
+   int n = 6;
+   printf("%dtý člen aritmetrické posloupnosti je:%d\n", n, an(a1,n,d));
+   return 0;
 }
 
